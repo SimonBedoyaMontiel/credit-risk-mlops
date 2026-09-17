@@ -62,7 +62,7 @@ COLUMNAS_ORDINALES = ['tendencia_ingresos']
 ORDEN_TENDENCIA = [['Sin_dato', 'Decreciente', 'Estable', 'Creciente']]
 
 # Ruta donde se guarda el modelo final entrenado
-RUTA_MODELO = "modelo_riesgo_credito.joblib"
+RUTA_MODELO = "models/modelo_riesgo_credito.joblib"
 
 
 # =============================================================
@@ -242,7 +242,7 @@ def graficar_comparacion(tabla):
     plt.xticks(rotation=15)
     plt.legend(loc='lower right')
     plt.tight_layout()
-    plt.savefig('comparacion_modelos.png', dpi=100)
+    plt.savefig("reports/comparacion_modelos.png", dpi=100)
     plt.show()
 
 
@@ -260,7 +260,7 @@ def graficar_curvas_roc(y_test, predicciones_proba):
     plt.title('Curvas ROC comparativas')
     plt.legend(loc='lower right')
     plt.tight_layout()
-    plt.savefig('curvas_roc.png', dpi=100)
+    plt.savefig("reports/curvas_roc.png", dpi=100)
     plt.show()
 
 

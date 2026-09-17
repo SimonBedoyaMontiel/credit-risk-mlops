@@ -28,7 +28,7 @@ from ft_engineering import procesar_dataframe
 # la raiz del proyecto (un nivel arriba de src), para que la API encuentre
 # el modelo sin importar desde que carpeta se ejecute.
 RUTA_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RUTA_MODELO = os.path.join(RUTA_BASE, "modelo_riesgo_credito.joblib")
+RUTA_MODELO = os.path.join(RUTA_BASE, "models", "modelo_riesgo_credito.joblib")
 
 # Se carga el modelo una sola vez al iniciar la aplicacion
 modelo = joblib.load(RUTA_MODELO)

@@ -17,8 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Se copia el codigo fuente y el modelo entrenado
 COPY src/ ./src/
-COPY modelo_riesgo_credito.joblib .
-COPY Base_de_datos.xlsx .
+COPY models/ ./models/
+COPY data/ ./data/
 
 # Se expone el puerto donde correra la API
 EXPOSE 8000

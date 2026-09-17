@@ -108,7 +108,7 @@ def transformar_variables(df):
     return df
 
 
-def ingenieria_caracteristicas(ruta="Base_de_datos.xlsx"):
+def ingenieria_caracteristicas(ruta="data/Base_de_datos.xlsx"):
     """
     Funcion principal. Ejecuta el proceso de ingenieria de caracteristicas
     en orden y devuelve el DataFrame con las variables listas para el

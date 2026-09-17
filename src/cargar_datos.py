@@ -13,7 +13,7 @@ import pandas as pd
 from pathlib import Path
 
 
-def cargar_datos(ruta="Base_de_datos.xlsx"):
+def cargar_datos(ruta="data/Base_de_datos.xlsx"):
     """
     Carga la base de datos de creditos desde un archivo Excel.
 

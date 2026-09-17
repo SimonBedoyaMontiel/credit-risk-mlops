@@ -23,20 +23,24 @@ La primera evaluación de los modelos arrojó un recall del 100%, un resultado s
     pim5-credit-risk-mlops/
     ├── src/
     │   ├── cargar_datos.py                 # Carga de la base de datos cruda
-    │   ├── comprension_eda.ipynb           # Análisis exploratorio de datos
     │   ├── ft_engineering.py               # Ingeniería de características
     │   ├── model_training_evaluation.py    # Entrenamiento y evaluación de modelos
     │   ├── model_monitoring.py             # Monitoreo y detección de data drift
     │   ├── app_monitoring.py               # Aplicación Streamlit de monitoreo
     │   └── model_deploy.py                 # Despliegue del modelo mediante API
-    ├── Base_de_datos.xlsx                  # Dataset del proyecto
-    ├── modelo_riesgo_credito.joblib        # Modelo entrenado y serializado
+    ├── notebooks/
+    │   └── comprension_eda.ipynb           # Análisis exploratorio de datos
+    ├── data/
+    │   └── Base_de_datos.xlsx              # Dataset del proyecto
+    ├── models/
+    │   └── modelo_riesgo_credito.joblib    # Modelo entrenado y serializado
+    ├── reports/
+    │   ├── comparacion_modelos.png         # Gráfico comparativo de modelos
+    │   └── curvas_roc.png                  # Curvas ROC de los modelos
     ├── requirements.txt                    # Dependencias del proyecto
     ├── Dockerfile                          # Definición de la imagen Docker
     ├── .dockerignore                       # Exclusiones para la imagen
-    ├── comparacion_modelos.png             # Gráfico comparativo de modelos
-    ├── curvas_roc.png                      # Curvas ROC de los modelos
-    └── readme.md                           # Documentación del proyecto
+    └── README.md                           # Documentación del proyecto
 
 ## El dataset
 
@@ -86,6 +90,10 @@ Se entrenaron y compararon cuatro modelos, todos con manejo del desbalance de cl
 El modelo seleccionado fue Random Forest, por presentar el mejor F1 de la clase de interés y el mejor ROC-AUC. La selección se basó en el F1 y no solo en el recall, porque el F1 equilibra la detección de malos pagadores con la ausencia de falsas alarmas. La Regresión Logística lograba un recall algo mayor, pero a costa de clasificar erróneamente a 86 buenos clientes como riesgosos, un comportamiento poco deseable para el negocio. El Random Forest detecta cerca del 73% de los clientes que no pagan sin generar una sola falsa alarma.
 
 Se reconoce con transparencia que un recall del 73% implica que una parte de los malos pagadores no se detecta. Esto es esperable dada la dificultad de identificar a una clase minoritaria del 5%, y constituye una línea de mejora futura mediante técnicas como el ajuste del umbral de decisión o el sobremuestreo.
+
+![Comparación de modelos](reports/comparacion_modelos.png)
+
+![Curvas ROC](reports/curvas_roc.png)
 
 ### 5. Monitoreo y detección de data drift
 
@@ -168,8 +176,7 @@ Respuesta de la API:
 
 7. Levantar la API de predicción de forma local. Una vez activa, la documentación interactiva queda disponible en http://localhost:8000/docs
 
-   cd src
-   uvicorn model_deploy:app --reload
+   uvicorn src.model_deploy:app --reload
 
 ## Despliegue con Docker
 
