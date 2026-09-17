@@ -1,0 +1,3 @@
+# Los notebooks pesan mucho por las imagenes incrustadas y distorsionan
+# la deteccion de lenguaje de GitHub. El codigo real del proyecto es Python.
+*.ipynb linguist-documentation
