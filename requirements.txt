@@ -1,14 +1,26 @@
-pandas
-numpy
-scikit-learn
-xgboost
-lightgbm
-scipy
-matplotlib
-seaborn
-openpyxl
-streamlit
-fastapi
-uvicorn
-pydantic
-joblib
+# Versiones fijadas para garantizar reproducibilidad.
+# scikit-learn se mantiene en 1.9.0 porque es la version con la que se
+# entreno y serializo modelo_riesgo_credito.joblib: cargarlo con otra
+# version genera advertencias de compatibilidad al deserializar.
+
+# Datos
+pandas==3.0.5
+numpy==2.5.3
+scipy==1.18.1
+openpyxl==3.1.5
+
+# Modelado
+scikit-learn==1.9.0
+xgboost==3.4.1
+lightgbm==4.7.0
+joblib==1.6.0
+
+# Visualizacion
+matplotlib==3.11.2
+seaborn==0.13.2
+streamlit==1.64.0
+
+# API
+fastapi==0.141.1
+uvicorn==0.53.0
+pydantic==2.13.5
