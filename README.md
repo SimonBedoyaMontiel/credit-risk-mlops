@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Riesgo Crediticio — del análisis exploratorio a una API en producción" width="100%">
+</p>
+
 # Modelo de Riesgo Crediticio con Enfoque MLOps
 
 Sistema de predicción del comportamiento de pago de clientes de crédito, desarrollado con un enfoque completo de MLOps que abarca el análisis exploratorio de datos, la ingeniería de características, el modelamiento supervisado, el monitoreo del modelo en producción y su despliegue mediante una API contenerizada con Docker.
