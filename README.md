@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Riesgo Crediticio — del análisis exploratorio a una API en producción" width="100%">
+  <img src="assets/banner.png" alt="Riesgo Crediticio — del análisis exploratorio a una API en producción" width="100%">
 </p>
 
 # Modelo de Riesgo Crediticio con Enfoque MLOps
