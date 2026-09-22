@@ -154,7 +154,7 @@ Respuesta de la API:
 
 1. Clonar el repositorio:
 
-   git clone https://github.com/simonbm17/pim5-credit-risk-mlops.git
+   git clone https://github.com/SimonBedoyaMontiel/credit-risk-mlops.git
    cd pim5-credit-risk-mlops
 
 2. Crear y activar un entorno virtual:
